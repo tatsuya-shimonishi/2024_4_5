@@ -12,7 +12,6 @@
             <form method="post" action="/question_next">
                 <button type="submit" name="no" value="{{output_no}}" id="next_question_button">次の質問</button>
             </form>
-            <button onclick="location.href='random'">次の質問（ランダム）</button>
         </div>
         <div>
             <a href="home">ホーム画面へ</a>

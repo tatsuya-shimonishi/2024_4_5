@@ -27,10 +27,21 @@ def getQuestion(disp_no):
     output_question = rows_as_lists[target_index][question]
     return output_question
 
-#質問画面のテンプレートを取得
+#ランダム質問画面のテンプレートを取得
 def getRdTemp():
     max_count = len(rows_as_lists)-1
     disp_no = random.randint(0, max_count)
+
+    #質問Noを取得
+    output_no = getNo(disp_no)
+
+    #質問内容を取得
+    output_question = getQuestion(disp_no)
+    
+    return template("random_temp", output_no=output_no, output_question=output_question)
+
+#ランダム質問画面のテンプレートを取得　※アドバイス画面からの遷移
+def getRdAdTemp(disp_no):
 
     #質問Noを取得
     output_no = getNo(disp_no)

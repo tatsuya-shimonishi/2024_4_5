@@ -47,3 +47,16 @@ def getAnTemp(disp_no):
     
     return template("answer_temp", output_no=output_no, output_question=output_question, output_answer=output_answer)
 
+#質問画面のテンプレートを取得
+def getAnRdTemp(disp_no):
+
+    #質問Noを取得
+    output_no = getNo(disp_no)
+
+    #質問内容を取得
+    output_question = getQuestion(disp_no)
+
+    #回答内容を取得
+    output_answer = getAnswer(disp_no)
+    
+    return template("answer_random_temp", output_no=output_no, output_question=output_question, output_answer=output_answer)

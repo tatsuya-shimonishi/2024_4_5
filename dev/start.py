@@ -33,7 +33,14 @@ def do_question():
 def randomQuestion():
     return rdqs.getRdTemp()
 
-#質問画面※「質問に戻る」ボタン押下時
+#質問画面（ランダム）※アドバイス画面からの遷移
+@route("/random_advice", method="POST")
+def randomQuestion():
+    disp_no = request.forms.no
+    disp_no = int(disp_no)-1
+    return rdqs.getRdAdTemp(disp_no)
+
+#質問画面　※「質問に戻る」ボタン押下時
 @route("/question_return", method="POST")
 def do_question():
     disp_no = request.forms.no
@@ -47,12 +54,26 @@ def answer():
     disp_no = int(disp_no)-1
     return ans.getAnTemp(disp_no)
 
+#回答画面　※ランダム画面からの遷移
+@route("/answer_random", method="POST")
+def answer():
+    disp_no = request.forms.no
+    disp_no = int(disp_no)-1
+    return ans.getAnRdTemp(disp_no)
+
 #アドバイス画面
 @route("/advice", method="POST")
 def advice():
     disp_no = request.forms.no
     disp_no = int(disp_no)-1
     return adv.getAdTemp(disp_no)
+
+#アドバイス画面　※ランダム画面からの遷移
+@route("/advice_random", method="POST")
+def advice():
+    disp_no = request.forms.no
+    disp_no = int(disp_no)-1
+    return adv.getAdRdTemp(disp_no)
 
 #質問内容の登録（画面入力）画面
 @route("/input")

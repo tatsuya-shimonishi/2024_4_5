@@ -1,15 +1,13 @@
 <html>
     <body>
-        <h1>質問 No.{{output_no}}</h1>
+        <h1>回答</h1>
         <div>
-            <p>{{output_question}}</p>
+            <h2>質問 No.{{output_no}}：{{output_question}}</h2>
+            <p>回答：{{output_answer}}</p>
         </div>
         <div>
             <form method="post" action="/advice_random">
                 <button type="submit" name="no" value="{{output_no}}">アドバイス</button>
-            </form>
-            <form method="post" action="/answer_random">
-                <button type="submit" name="no" value="{{output_no}}">自己回答</button>
             </form>
             <button onclick="location.href='random'">次の質問</button>
         </div>
