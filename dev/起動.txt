@@ -1,5 +1,5 @@
 【コマンド】
-cd Desktop\製作物\4月5日提出分\dev
+cd C:\Users\frontier-Python\Desktop\製作物\4月5日提出分\dev
 python start.py
 
 【リンク】
