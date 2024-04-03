@@ -82,9 +82,6 @@ def advice():
 #質問内容の登録（画面入力）画面
 @route("/question_input_init")
 def question_input_init():
-    #キャッシュクリア
-    global cache_data
-    cache_data = {}
     return inp.getQsInp()
 
 #質問内容の登録（画面入力）画面　※登録ボタン押下
@@ -102,28 +99,24 @@ def question_input():
     #画面入力より登録or更新
     inp.inputQs(input_data)
 
-    #キャッシュクリア
-    global cache_data
-    cache_data = {}
-
     #画面更新
     return inp.getQsInp()
 
 #質問内容の登録（Excelアップロード）画面
 @route("/question_upload")
 def question_upload():
-    return "質問内容の登録（Excelアップロード）画面"
+    return upl.getQsUptemp()
+
+#質問内容の登録（Excelアップロード）画面　※「登録」ボタン押下時
+@route("/question_upload", method="POST")
+def question_upload_file():
+    #Excelファイルを登録
+    result = upl.regExcel()
+    return upl.getQsUptemp(reg_result=result)
 
 #質問一覧画面
 @route("/question_list")
 def question_list():
     return "質問一覧画面"
-
-# キャッシュをクリアするエンドポイント
-@route('/clear_cache')
-def clear_cache():
-    global cache_data
-    cache_data = {}  # キャッシュを空にする
-    return 'Cache cleared!'
 
 run(host="localhost", port=8080, debug=True)
