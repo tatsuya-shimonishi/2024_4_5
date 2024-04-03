@@ -6,8 +6,8 @@
         <span id="next_question_disabled"  style="display: none;">{{next_question_disabled}}</span>
         <h1>回答</h1>
         <div>
-            <h2>質問 No.{{output_no}}：{{output_question}}</h2>
-            <p>回答：{{output_answer}}</p>
+            <p>質問 No.{{output_no}}：{{output_question}}</p>
+            <h3>{{output_answer}}</h3>
         </div>
         <div class="button-container">
             <form method="post" action="/advice">

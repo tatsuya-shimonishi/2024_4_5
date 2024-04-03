@@ -7,7 +7,7 @@
         <span id="next_question_disabled"  style="display: none;">{{next_question_disabled}}</span>
         <h1>質問 No.{{output_no}}</h1>
         <div>
-            <p>{{output_question}}</p>
+            <h3>{{output_question}}</h3>
         </div>
         <div class="button-container">
             <form method="post" action="/question_back">

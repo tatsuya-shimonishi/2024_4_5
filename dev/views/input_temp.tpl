@@ -12,15 +12,15 @@
                 </div>
                 <div class="form-group">
                     <label for="question">質問</label>
-                    <input type="text" name="question">
+                    <textarea type="text" name="question"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="answer">回答</label>
-                    <input type="text" name="answer">
+                    <textarea type="text" name="answer"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="advice">アドバイス</label>
-                    <input type="text" name="advice">
+                    <textarea type="text" name="advice"></textarea>
                 </div>
                 <input type="submit" value="登録">
             </form>

@@ -5,7 +5,7 @@
     <body>
         <h1>質問 No.{{output_no}}</h1>
         <div>
-            <p>{{output_question}}</p>
+            <h3>{{output_question}}</h3>
         </div>
         <div class="button-container">
             <form method="post" action="/advice_random">

@@ -2,6 +2,10 @@ h1, h2, div {
     text-align: center;
     margin-bottom: 10px;
 }
+h3 {
+    margin-left: 15%;
+    margin-right: 15%;
+}
 .button-container {
     display: flex;
     justify-content: center; /* ボタンを中央寄せ */
@@ -21,11 +25,14 @@ form {
     width: 100px; /* ラベルの固定幅 */
     text-align: right; /* テキストを右寄せ */
     margin-right: 10px; /* ラベルと入力フィールドの間にマージンを追加 */
-    margin-left: 5%;
+    margin-left: 15%;
 }
 .form-group input {
+    width: 30px;
+}
+.form-group textarea {
+    margin-right: 20%;
     flex: 1; /* 入力フィールドが残りのスペースを占有 */
-    margin-right: 10%;
 }
 table {
     border-collapse: collapse;
