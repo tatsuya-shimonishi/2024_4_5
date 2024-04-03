@@ -1,4 +1,7 @@
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    </head>
     <body>
         <h1>質問内容の登録（Excelアップロード）</h1>
         <div>
@@ -8,7 +11,7 @@
                 <span>{{reg_result}}</span>
             </form>
         </div>
-        <div>
+        <div class="button-container">
             <button onclick="location.href='question_list'">質問一覧の表示</button>
         </div>
         <div>

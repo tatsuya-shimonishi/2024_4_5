@@ -1,0 +1,42 @@
+h1, h2, div {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* ボタンを中央寄せ */
+}
+.button-container button {
+    margin: 5px; /* ボタン間の間隔 */
+}
+form {
+    margin-bottom: 0;
+}
+.form-group {
+    display: flex;
+    align-items: center; /* 垂直方向に中央揃え */
+    margin-bottom: 10px; /* フォームグループの下部にマージンを追加 */
+}
+.form-group label {
+    width: 100px; /* ラベルの固定幅 */
+    text-align: right; /* テキストを右寄せ */
+    margin-right: 10px; /* ラベルと入力フィールドの間にマージンを追加 */
+    margin-left: 5%;
+}
+.form-group input {
+    flex: 1; /* 入力フィールドが残りのスペースを占有 */
+    margin-right: 10%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10 auto; /* 表を中央揃え */
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    word-wrap: break-word;
+}
+td:nth-child(1) {
+    text-align: center;
+}

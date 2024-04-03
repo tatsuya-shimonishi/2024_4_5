@@ -1,4 +1,4 @@
-from bottle import route, run, template, request
+from bottle import route, run, template, request, static_file
 import question as qs
 import random_question as rdqs
 import answer as ans
@@ -6,6 +6,11 @@ import advice as adv
 import question_input as inp
 import question_upload as upl
 import question_list as lis
+
+#スタイルシートの読み込み
+@route('/static/css/<filename:path>')
+def serve_css(filename):
+    return static_file(filename, root='./static/css')
 
 #ホーム画面
 @route("/home")

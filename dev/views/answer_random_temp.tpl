@@ -1,11 +1,14 @@
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    </head>
     <body>
         <h1>回答</h1>
         <div>
             <h2>質問 No.{{output_no}}：{{output_question}}</h2>
             <p>回答：{{output_answer}}</p>
         </div>
-        <div>
+        <div class="button-container">
             <form method="post" action="/advice_random">
                 <button type="submit" name="no" value="{{output_no}}">アドバイス</button>
             </form>

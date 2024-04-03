@@ -1,4 +1,7 @@
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    </head>
     <body>
         <span id="back_question_disabled"  style="display: none;">{{back_question_disabled}}</span>
         <span id="next_question_disabled"  style="display: none;">{{next_question_disabled}}</span>
@@ -6,7 +9,7 @@
         <div>
             <p>{{output_question}}</p>
         </div>
-        <div>
+        <div class="button-container">
             <form method="post" action="/question_back">
                 <button type="submit" name="no" value="{{output_no}}" id="back_question_button">前の質問</button>
             </form>
