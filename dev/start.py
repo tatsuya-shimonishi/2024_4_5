@@ -117,6 +117,6 @@ def question_upload_file():
 #質問一覧画面
 @route("/question_list")
 def question_list():
-    return "質問一覧画面"
+    return lis.getQsListtemp()
 
 run(host="localhost", port=8080, debug=True)
