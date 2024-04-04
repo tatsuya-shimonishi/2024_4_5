@@ -31,13 +31,13 @@ def getRegData(disp_no):
     no = tmp[0]
 
     #質問内容を取得
-    question = gd.getQuestion(disp_no, rows_as_lists).replace('_x000D_', '')
+    question = str(gd.getQuestion(disp_no, rows_as_lists)).replace('_x000D_', '')
 
     #回答内容を取得
-    answer = gd.getAnswer(disp_no, rows_as_lists).replace('_x000D_', '')
+    answer = str(gd.getAnswer(disp_no, rows_as_lists)).replace('_x000D_', '')
 
     #アドバイス内容を取得
-    advice = gd.getAdvice(disp_no, rows_as_lists).replace('_x000D_', '')
+    advice = str(gd.getAdvice(disp_no, rows_as_lists)).replace('_x000D_', '')
 
     #テンプレートを返却
     return template("input_reg_temp", no_judge=no_judge, no=no, question=question, answer=answer, advice=advice)
