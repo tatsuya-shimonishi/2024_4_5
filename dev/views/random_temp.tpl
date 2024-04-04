@@ -8,11 +8,11 @@
             <h3>{{output_question}}</h3>
         </div>
         <div class="button-container">
+            <form method="post" action="/answer_random">
+                <button type="submit" name="no" value="{{output_no}}">回答</button>
+            </form>
             <form method="post" action="/advice_random">
                 <button type="submit" name="no" value="{{output_no}}">アドバイス</button>
-            </form>
-            <form method="post" action="/answer_random">
-                <button type="submit" name="no" value="{{output_no}}">自己回答</button>
             </form>
             <button onclick="location.href='random'">次の質問</button>
         </div>

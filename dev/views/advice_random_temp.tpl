@@ -13,7 +13,7 @@
                 <button type="submit" name="no" value="{{output_no}}">質問に戻る</button>
             </form>
             <form method="post" action="/answer_random">
-                <button type="submit" name="no" value="{{output_no}}">自己回答</button>
+                <button type="submit" name="no" value="{{output_no}}">回答</button>
             </form>
         </div>
         <div>

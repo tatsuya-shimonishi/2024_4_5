@@ -89,23 +89,34 @@ def advice():
 def question_input_init():
     return inp.getQsInp()
 
-#質問内容の登録（画面入力）画面　※登録ボタン押下
+#質問内容の登録（画面入力）画面　※「登録内容の表示」or「登録」ボタン押下
 @route("/question_input", method="POST")
 def question_input():
+    button_value = request.forms.get('button')
 
-    #画面入力内容を取得
-    input_data = [
-        int(request.forms.no),
-        request.forms.question,
-        request.forms.answer,
-        request.forms.advice
-    ]
+    #登録内容の表示
+    if button_value == "disp_reg":
+        disp_no = request.forms.no
 
-    #画面入力より登録or更新
-    inp.inputQs(input_data)
+        #登録内容の取得
+        return inp.getRegData(disp_no)
+    
+    #登録or更新処理
+    elif button_value == "reg":
 
-    #画面更新
-    return inp.getQsInp()
+        #画面入力内容を取得
+        input_data = [
+            request.forms.no,
+            request.forms.question,
+            request.forms.answer,
+            request.forms.advice
+        ]
+
+        #画面入力より登録or更新
+        result = inp.inputQs(input_data)
+
+        #画面更新
+        return inp.getQsInp(no_judge=result)
 
 #質問内容の登録（Excelアップロード）画面
 @route("/question_upload")

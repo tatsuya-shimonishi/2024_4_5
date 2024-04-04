@@ -13,11 +13,11 @@
             <form method="post" action="/question_back">
                 <button type="submit" name="no" value="{{output_no}}" id="back_question_button">前の質問</button>
             </form>
+            <form method="post" action="/answer">
+                <button type="submit" name="no" value="{{output_no}}">回答</button>
+            </form>
             <form method="post" action="/advice">
                 <button type="submit" name="no" value="{{output_no}}">アドバイス</button>
-            </form>
-            <form method="post" action="/answer">
-                <button type="submit" name="no" value="{{output_no}}">自己回答</button>
             </form>
             <form method="post" action="/question_next">
                 <button type="submit" name="no" value="{{output_no}}" id="next_question_button">次の質問</button>

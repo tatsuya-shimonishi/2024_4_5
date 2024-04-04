@@ -12,7 +12,7 @@ def getAdTemp(disp_no):
     #質問内容を取得
     output_question = gd.getQuestion(disp_no, rows_as_lists)
 
-    #回答内容を取得
+    #アドバイス内容を取得
     output_advice = gd.getAdvice(disp_no, rows_as_lists)
     
     #テンプレートを返却
@@ -29,7 +29,7 @@ def getAdRdTemp(disp_no):
     #質問内容を取得
     output_question = gd.getQuestion(disp_no, rows_as_lists)
 
-    #回答内容を取得
+    #アドバイス内容を取得
     output_advice = gd.getAdvice(disp_no, rows_as_lists)
     
     #テンプレートを返却
