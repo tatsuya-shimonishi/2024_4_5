@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     </head>
     <body>
-        <h1>質問 No.{{output_no}}</h1>
+        <h1>質問</h1>
         <div>
             <h3>{{output_question}}</h3>
         </div>

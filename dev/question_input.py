@@ -31,13 +31,13 @@ def getRegData(disp_no):
     no = tmp[0]
 
     #質問内容を取得
-    question = gd.getQuestion(disp_no, rows_as_lists)
+    question = gd.getQuestion(disp_no, rows_as_lists).replace('_x000D_', '')
 
     #回答内容を取得
-    answer = gd.getAnswer(disp_no, rows_as_lists)
+    answer = gd.getAnswer(disp_no, rows_as_lists).replace('_x000D_', '')
 
     #アドバイス内容を取得
-    advice = gd.getAdvice(disp_no, rows_as_lists)
+    advice = gd.getAdvice(disp_no, rows_as_lists).replace('_x000D_', '')
 
     #テンプレートを返却
     return template("input_reg_temp", no_judge=no_judge, no=no, question=question, answer=answer, advice=advice)
@@ -64,7 +64,7 @@ def inputQs(input_data):
     df = pd.DataFrame(rows_as_lists, columns=['No', '質問', '回答', 'アドバイス'])
     df.to_excel(gd.file_name, index=False)
 
-    return ""
+    return f"No.{input_data[gd.no]} 登録完了"
 
 def getQsInp(no_judge=""):
     rows_as_lists = gd.getExcel()

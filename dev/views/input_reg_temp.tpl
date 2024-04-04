@@ -14,15 +14,15 @@
                 </div>
                 <div class="form-group">
                     <label for="question">質問</label>
-                    <textarea type="text" name="question">{{question}}</textarea>
+                    <textarea type="text" name="question">{{! question}}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="answer">回答</label>
-                    <textarea type="text" name="answer" id="answer">{{answer}}</textarea>
+                    <textarea type="text" name="answer" id="answer">{{! answer}}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="advice">アドバイス</label>
-                    <textarea type="text" name="advice">{{advice}}</textarea>
+                    <textarea type="text" name="advice">{{! advice}}</textarea>
                 </div>
                 <button type="submit" name="button" value="reg">登録</button>
             </form>
