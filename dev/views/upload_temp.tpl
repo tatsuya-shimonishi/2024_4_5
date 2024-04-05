@@ -8,7 +8,7 @@
             <form action="/question_upload" method="post" enctype="multipart/form-data">
                 <input type="file" name="uploadFile">
                 <input type="submit" value="登録">
-                <span>{{reg_result}}</span>
+                <span id="error_messe">{{reg_result}}</span>
             </form>
         </div>
         <div class="button-container">

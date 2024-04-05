@@ -19,6 +19,6 @@ def regExcel():
             f.write(uploaded_file.file.read())
         result = "登録完了"
     else:
-        result = "Excelファイルを選択してください"
+        result = "※Excelファイルを選択してください"
 
     return result
