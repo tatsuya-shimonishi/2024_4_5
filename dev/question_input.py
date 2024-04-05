@@ -2,7 +2,7 @@ from bottle import template
 import pandas as pd
 import get_data as gd
 
-#
+#質問一覧の取得
 def getRegData(disp_no):
     no_judge = ""
     no = ""
@@ -66,6 +66,7 @@ def inputQs(input_data):
 
     return f"No.{input_data[gd.no]} 登録完了"
 
+#テンプレート返却
 def getQsInp(no_judge=""):
     rows_as_lists = gd.getExcel()
 
